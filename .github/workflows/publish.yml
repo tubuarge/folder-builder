@@ -1,4 +1,4 @@
-name: publish Node.js Package
+name: Folder Builder Package
 
 on:
   push:
