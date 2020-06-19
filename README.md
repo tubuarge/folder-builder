@@ -1,6 +1,8 @@
 # Folder Builder
 Easy way to build folder structure via node.js
 
+It helps you to create files and folders easily. It can create files inside other folders recursively. Can create, delete, update files and or folders at the same time. Add this to your package.json file and it is ready to use.
+
 ## Get Started
 `FolderBuilder` is used to create a new folder management system.
 
