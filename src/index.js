@@ -2,7 +2,6 @@
 const Folder = require('./models/Folder');
 const File = require('./models/File');
 
-
 class FolderBuilder {
   constructor(options) {
     let baseOptions = {
