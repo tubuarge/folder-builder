@@ -1,7 +1,7 @@
-const FormBuilder = require('../src');
+const FolderBuilder = require('../src');
 
-// Create a new FormBuilder instance with path
-const fb = new FormBuilder(__dirname);
+// Create a new FolderBuilder instance with path
+const fb = new FolderBuilder(__dirname);
 
 // Create a new folder instance with name
 const newFolder = fb.createFolder('ex5');
@@ -23,7 +23,7 @@ const newFileTemplate = fb.createFile({
 
 // Basic render created template
 const renderedNewFile = newFileTemplate.render({
-  name: 'FormBuilder User',
+  name: 'FolderBuilder User',
   age: 21,
 });
 
@@ -35,5 +35,5 @@ newFolder.build().catch(console.error);
 
 // So, it will be executed
 // ./ex5/sample.sh
-// -> hello from FormBuilder User
-// -> You FormBuilder User! You are adult
+// -> hello from FolderBuilder User
+// -> You FolderBuilder User! You are adult

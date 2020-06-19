@@ -1,8 +1,7 @@
-const FormBuilder = require('../src');
+const FolderBuilder = require('../src');
 
-// Create a new FormBuilder instance with path
-const fb = new FormBuilder(__dirname);
-
+// Create a new FolderBuilder instance with path
+const fb = new FolderBuilder(__dirname);
 
 // Create a new folder instance with name
 const newFolder = fb.createFolder('ex4');
@@ -19,7 +18,7 @@ newFolder.addFile({
 // Adding a bash file into inside folder which was added into created folder
 insideFolder.addFile({
   name: 'hello.sh',
-  content: '#!/bin/bash\necho hello from FormBuilder',
+  content: '#!/bin/bash\necho hello from FolderBuilder',
   mode: 0o555, // 555 -> readable and executable
 });
 
@@ -28,4 +27,4 @@ newFolder.build().catch(console.error);
 
 // So, it will be executed
 // ./ex4/inside/hello.sh
-// -> hello from FormBuilder
+// -> hello from FolderBuilder

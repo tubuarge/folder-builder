@@ -1,8 +1,7 @@
-const FormBuilder = require('../src');
+const FolderBuilder = require('../src');
 
-// Create a new FormBuilder instance with path
-const fb = new FormBuilder(__dirname);
-
+// Create a new FolderBuilder instance with path
+const fb = new FolderBuilder(__dirname);
 
 // Create a new folder instance with name
 const newFolder = fb.createFolder('ex2');

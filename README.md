@@ -5,7 +5,7 @@ Easy way to build folder structure via node.js
 `FolderBuilder` is used to create a new folder management system.
 
 ```js
-const fb = new FormBuilder(__dirname);
+const fb = new FolderBuilder(__dirname);
 ```
 #### Constructor Parameters
 
@@ -15,7 +15,7 @@ Object -> Folder and File default (Options)[file-options]
 
 Example:
 ```js
-const fb = new FormBuilder({
+const fb = new FolderBuilder({
     "defaultFolder": {
                 "name" : "sample"  
             },
@@ -29,10 +29,10 @@ const fb = new FormBuilder({
 ### Basic Example
 
 ```js
-const FormBuilder = require('../src');
+const FolderBuilder = require('../src');
 
-// Create a new FormBuilder instance with path
-const fb = new FormBuilder(__dirname);
+// Create a new FolderBuilder instance with path
+const fb = new FolderBuilder(__dirname);
 
 // Create a new folder instance with name
 const newFolder = fb.createFolder('ex1');
@@ -169,10 +169,10 @@ Object -> Key-Value to render object inside the current file content, it uses $[
 
 Example
 ```js
-const FormBuilder = require('../src');
+const FolderBuilder = require('../src');
 
-// Create a new FormBuilder instance with path
-const fb = new FormBuilder(__dirname);
+// Create a new FolderBuilder instance with path
+const fb = new FolderBuilder(__dirname);
 
 // Create a new folder instance with name
 const newFolder = fb.createFolder('ex5');
@@ -194,7 +194,7 @@ const newFileTemplate = fb.createFile({
 
 // Basic render created template
 const renderedNewFile = newFileTemplate.render({
-  name: 'FormBuilder User',
+  name: 'FolderBuilder User',
   age: 21,
 });
 
@@ -206,8 +206,8 @@ newFolder.build().catch(console.error);
 
 // So, it will be executed
 // ./ex5/sample.sh
-// -> hello from FormBuilder User
-// -> You FormBuilder User! You are adult
+// -> hello from FolderBuilder User
+// -> You FolderBuilder User! You are adult
 ```
 ---
 
