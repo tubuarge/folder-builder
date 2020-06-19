@@ -154,7 +154,7 @@ Options
 
 > Warning : To insert the content into the file during building process, mode must include Write Permission
 
-Folder Methods
+File Methods
 - [Render()](#render)
 
 ---
@@ -212,7 +212,9 @@ newFolder.build().catch(console.error);
 ---
 
 ## Examples
-For more examples, look at examples folder.
+
+For more examples, look at `examples` folder.
+
 ---
 ## License
   Copyright 2020, TUBU ARGE
