@@ -25,7 +25,7 @@ const fb = new FormBuilder({
     });
 ```
 
-
+---
 ### Basic Example
 
 ```js
@@ -50,6 +50,8 @@ Main Folder Builder Methods
 - [createFile()](#createFile)
 
     Create [file](#file) instance
+    
+---
 
 #### createFolder
 `fb.createFolder(folder)`
@@ -61,6 +63,7 @@ String -> Folder Name
 
 Object -> Folder [Options](#folder-options)
 
+---
 
 
 #### createFile
@@ -73,7 +76,7 @@ String -> Folder Name
 
 Object -> File Options
 
-
+---
 ### Folder
 Folder instance for management folder works
 
@@ -95,6 +98,7 @@ Folder Methods
 - [addFolder()](#addFolder)
 - [addFile()](#addFile)
 - [build()](#build)
+---
 
 #### addFolder
 Add a child folder into the current folder, 
@@ -107,6 +111,8 @@ String -> Folder Name
 
 Object -> Folder (Options)[folder-options]
 
+---
+
 #### addFile
 Add a child file into the current folder,
 return a new file instance
@@ -118,13 +124,16 @@ String -> File Name
 
 Object -> Folder (Options)[folder-options]
 
-#### build
-Build the folder with its children as folders and files, recursively.
+---
 
+#### build
+
+Build the folder with its children as folders and files, recursively.
 > Also, create zip files if `archive` of the folder is `true`
 
 `newFolder.build()`
 
+---
 
 ### File
 File instance for management file works
@@ -148,6 +157,7 @@ Options
 Folder Methods
 - [Render()](#render)
 
+---
 #### render
 Render the current file content, 
 and return rendered file instance
@@ -199,10 +209,11 @@ newFolder.build().catch(console.error);
 // -> hello from FormBuilder User
 // -> You FormBuilder User! You are adult
 ```
+---
 
 ## Examples
 For more examples, look at examples folder.
-
+---
 ## License
   Copyright 2020, TUBU ARGE
 
