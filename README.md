@@ -43,30 +43,30 @@ newFolder.build(newFolder).catch(console.error);
 ```
 
 Main Folder Builder Methods
-- [createFolder()](createFolder)
+- [createFolder()](#createFolder)
 
-    Create [folder](folder) instance
+    Create [folder](#folder) instance
     
-- [createFile()](createFile)
+- [createFile()](#createFile)
 
-    Create [file](file) instance
+    Create [file](#file) instance
 
 #### createFolder
 `fb.createFolder(folder)`
 
-Returns a new (folder)[folder] instance
+Returns a new [folder](#folder) instance
 
 ##### Parameters
 String -> Folder Name
 
-Object -> Folder (Options)[folder-options]
+Object -> Folder [Options](#folder-options)
 
 
 
 #### createFile
 `const newFolder = fb.createFile(file)`
 
-Returns a new (file)[file] instance
+Returns a new [file](#file) instance
 
 ##### Parameters
 String -> Folder Name
@@ -92,9 +92,9 @@ Folder instance for management folder works
 - archive : Generate a zip file of current folder, current path
 
 Folder Methods
-- [addFolder()](addFolder)
-- [addFile()](addFile)
-- [build()](build)
+- [addFolder()](#addFolder)
+- [addFile()](#addFile)
+- [build()](#build)
 
 #### addFolder
 Add a child folder into the current folder, 
@@ -146,7 +146,7 @@ Options
 > Warning : To insert the content into the file during building process, mode must include Write Permission
 
 Folder Methods
-- [Render()](render)
+- [Render()](#render)
 
 #### render
 Render the current file content, 
