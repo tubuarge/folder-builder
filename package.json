@@ -16,7 +16,7 @@
     "fs-extra"
   ],
   "author": "TubuArge",
-  "license": "MIT",
+  "license": "Apache-2.0 License",
   "dependencies": {
     "archiver": "^4.0.1",
     "fs-extra": "^9.0.1"
