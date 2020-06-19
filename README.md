@@ -11,7 +11,7 @@ const fb = new FormBuilder(__dirname);
 
 String -> Folder default path
 
-Object -> Folder and File default options
+Object -> Folder and File default (Options)[file-options]
 
 Example:
 ```js
