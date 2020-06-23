@@ -8,10 +8,8 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage=true"
   },
-  "repository": {
-    "type": "git",
-    "url": "ssh://github.com/tubuarge/folder-builder.git"
-  },
+  "repository":  "tubuarge/folder-builder"
+  ,
   "keywords": [
     "folder",
     "file",
@@ -31,14 +29,20 @@
       "/node_modules/"
     ]
   },
+  "engines": {
+    "node": ">= 10.0.0"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "src/index.js",
+    "examples/"
+  ],
   "devDependencies": {
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-jest": "^23.13.2",
     "jest": "^26.0.1"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
   }
 }
