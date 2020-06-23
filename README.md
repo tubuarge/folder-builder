@@ -2,6 +2,10 @@
 
 Easy way to build folder structure for [node](http://nodejs.org)
 
+[![GitHub license](https://img.shields.io/github/license/tubuarge/folder-builder)](https://github.com/tubuarge/folder-builder/blob/master/LICENSE)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/tubuarge/folder-builder)
+[![GitHub issues](https://img.shields.io/github/issues/tubuarge/folder-builder)](https://github.com/tubuarge/folder-builder/issues)
+
 It helps you to create files and folders easily. It can create files inside other folders recursively. Can create, delete, update files and or folders at the same time. Add this to your package.json file and it is ready to use.
 
 ## Get Started
@@ -216,7 +220,7 @@ newFolder.build().catch(console.error);
 
 ## Examples
 
-For more examples, look at `examples` folder.
+For more examples, look at [examples folder](./examples) .
 
 ---
 ## License
