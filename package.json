@@ -1,6 +1,6 @@
 {
   "name": "@tubuarge/folder-builder",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Easy way to build folder",
   "main": "./src/index.js",
   "scripts": {
@@ -28,8 +28,7 @@
     "testPathIgnorePatterns": [
       "/node_modules/"
     ],
-    "coverageDirectory": "./coverage/",
-    "collectCoverage": true
+    "coverageDirectory": "./coverage/"
   },
   "engines": {
     "node": ">= 10.0.0"

@@ -48,6 +48,12 @@ function archiveFolder(archivePath) {
   });
 }
 
+/** *
+ * Control folder archive field recursively
+ * @param mainPath {String} Main Path of Folder
+ * @param newFolder {Folder} Folder Instance
+ * @returns {Promise}
+ */
 function controlAndArchive(mainPath, newFolder) {
   const archivedPromises = [];
 
@@ -68,6 +74,12 @@ function controlAndArchive(mainPath, newFolder) {
   return Promise.all(archivedPromises);
 }
 
+/** *
+ * Control and build folder recursively
+ * @param mainPath {String} Main Path of Folder
+ * @param currentFolder{Folder} Folder Instance to Build
+ * @returns {Promise}
+ */
 function controlAndCreate(mainPath, currentFolder) {
   const generationPromises = [];
 
@@ -108,4 +120,5 @@ module.exports = {
   isInSameName,
   controlAndCreate,
   controlAndArchive,
+  generateFolder,
 };
