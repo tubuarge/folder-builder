@@ -6,7 +6,9 @@ node_js:
   - 12.16
 
 install:
+  - npm install yarn -g
   - npm install -g codecov
+  - yarn install
 
 script:
   - npm run test:coverage

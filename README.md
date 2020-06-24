@@ -2,6 +2,7 @@
 
 Easy way to build folder structure for [node](http://nodejs.org)
 
+[![Build Status](https://travis-ci.org/tubuarge/folder-builder.svg?branch=master)](https://travis-ci.org/tubuarge/folder-builder)
 [![GitHub license](https://img.shields.io/github/license/tubuarge/folder-builder)](https://github.com/tubuarge/folder-builder/blob/master/LICENSE)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/tubuarge/folder-builder)
 [![GitHub issues](https://img.shields.io/github/issues/tubuarge/folder-builder)](https://github.com/tubuarge/folder-builder/issues)
