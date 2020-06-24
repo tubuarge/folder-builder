@@ -1,10 +1,8 @@
-
 const fs = require('fs-extra');
 const path = require('path');
 const FormBuilder = require('../index');
 
 const testFolderPath = path.join(__dirname, 'test_folder');
-
 
 describe('FormBuilder', (() => {
   describe('createFolder', () => {
@@ -40,6 +38,50 @@ describe('FormBuilder', (() => {
       } catch (error) {
         expect(error).toBeTruthy();
         expect(error.message).toBe('Folder name is empty');
+      }
+    });
+
+    test('error occurs when name is number', () => {
+      try {
+        const fb = new FormBuilder();
+        const sampleFolder = fb.createFolder('sample');
+        sampleFolder.addFolder(123123);
+      } catch (error) {
+        expect(error).toBeTruthy();
+        expect(error.message).toBe('Invalid Folder Object');
+      }
+    });
+
+    test('error occurs when add same name folder', () => {
+      try {
+        const fb = new FormBuilder();
+        const sampleFolder = fb.createFolder('sample');
+        sampleFolder.addFolder('test');
+        sampleFolder.addFolder('test');
+      } catch (error) {
+        expect(error).toBeTruthy();
+        expect(error.message).toBe('Same folder name');
+      }
+    });
+    test('error occurs when add file with invalid name', () => {
+      try {
+        const fb = new FormBuilder();
+        const sampleFolder = fb.createFolder('sample');
+        sampleFolder.addFile(123123);
+      } catch (error) {
+        expect(error).toBeTruthy();
+        expect(error.message).toBe('Invalid file');
+      }
+    });
+    test('error occurs when add same name file', () => {
+      try {
+        const fb = new FormBuilder();
+        const sampleFolder = fb.createFolder('sample');
+        sampleFolder.addFile('test');
+        sampleFolder.addFile('test');
+      } catch (error) {
+        expect(error).toBeTruthy();
+        expect(error.message).toBe('Same file name');
       }
     });
 
@@ -194,6 +236,28 @@ describe('FormBuilder', (() => {
       });
     });
 
+    test('build a folder with json file', (done) => {
+      const fb = new FormBuilder({
+        defaultFolder: {
+          path: testFolderPath,
+        },
+      });
+      const folder = fb.createFolder('sample');
+
+      const sampleFile = folder.addFile({
+        name: 'sample.json',
+        content: {
+          color: 'blue',
+          weight: 500,
+        },
+      });
+      folder.build().then(() => {
+        expect(fs.existsSync(path.join(testFolderPath, 'sample'))).toBeTruthy();
+        expect(JSON.parse(String(fs.readFileSync(path.join(testFolderPath, 'sample', 'sample.json'))))).toStrictEqual(sampleFile.content);
+        done();
+      });
+    });
+
     test('build a folder with a mode file correctly', (done) => {
       const fb = new FormBuilder({
         defaultFolder: {
@@ -281,13 +345,11 @@ describe('FormBuilder', (() => {
 
       const sampleFolder3 = sampleFolder2.addFolder('sample3');
 
-
       sampleFolder.addFile('sample.txt');
       sampleFolder.addFile('sample2.txt');
 
       sampleFolder3.addFile('sample3.txt');
       sampleFolder2.addFile('sample4.txt');
-
 
       sampleFolder.build().then(() => {
         expect(fs.existsSync(path.join(testFolderPath, 'sample'))).toBeTruthy();

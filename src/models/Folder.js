@@ -28,7 +28,7 @@ function addFolder(folder) {
  * @param file {String, File} File Name or File Object
  * @params returnFile {Boolean} Returns file object
  */
-function addFile(file, cb) {
+function addFile(file) {
   if (FolderHelper.isInSameName(this.files, file.name || file)) {
     throw new Error('Same file name');
   }
@@ -36,10 +36,7 @@ function addFile(file, cb) {
     const newFile = new File(file);
 
     this.files.push(newFile);
-    if (cb && typeof cb === 'function') {
-      cb(newFile);
-    }
-    return;
+    return newFile;
   }
   throw new Error('Invalid file');
 }
@@ -77,14 +74,10 @@ const Folder = function createFolder(folder) {
   }
 
   if (typeof folder === 'string') {
-    if (!folder || !folder.trim()) {
-      throw new Error('Folder name is empty');
-    }
     return Object.create({ ...folderBase, ...{ name: folder } });
   }
 
   throw new Error('Folder is undefined');
 };
-
 
 module.exports = Folder;
