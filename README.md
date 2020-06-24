@@ -2,9 +2,11 @@
 
 Easy way to build folder structure for [node](http://nodejs.org)
 
-[![GitHub license](https://img.shields.io/github/license/tubuarge/folder-builder)](https://github.com/tubuarge/folder-builder/blob/master/LICENSE)
+[![Build Status](https://travis-ci.org/tubuarge/folder-builder.svg?branch=master)](https://travis-ci.org/tubuarge/folder-builder)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/tubuarge/folder-builder)
+[![codecov](https://codecov.io/gh/tubuarge/folder-builder/branch/master/graph/badge.svg)](https://codecov.io/gh/tubuarge/folder-builder)
 [![GitHub issues](https://img.shields.io/github/issues/tubuarge/folder-builder)](https://github.com/tubuarge/folder-builder/issues)
+[![GitHub license](https://img.shields.io/github/license/tubuarge/folder-builder)](https://github.com/tubuarge/folder-builder/blob/master/LICENSE)
 
 It helps you to create files and folders easily. It can create files inside other folders recursively. Can create, delete, update files and or folders at the same time. Add this to your package.json file and it is ready to use.
 
@@ -116,7 +118,7 @@ and return a new folder instance
 ##### Parameters
 String -> Folder Name
 
-Object -> Folder (Options)[folder-options]
+Object -> Folder [Options](folder-options)
 
 ---
 
@@ -129,7 +131,7 @@ return a new file instance
 ##### Parameters
 String -> File Name
 
-Object -> Folder (Options)[folder-options]
+Object -> Folder [Options](folder-options)
 
 ---
 

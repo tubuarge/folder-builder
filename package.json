@@ -27,7 +27,9 @@
     "testEnvironment": "node",
     "testPathIgnorePatterns": [
       "/node_modules/"
-    ]
+    ],
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
   },
   "engines": {
     "node": ">= 10.0.0"
