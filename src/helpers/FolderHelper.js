@@ -1,3 +1,9 @@
+/*!
+ * folder-builder
+ * Copyright(c) 2020 TUBU ARGE
+ * MIT Licensed
+ */
+
 // required
 const fs = require('fs-extra');
 const path = require('path');

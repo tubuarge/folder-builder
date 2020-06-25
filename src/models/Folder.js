@@ -1,3 +1,9 @@
+/*!
+ * folder-builder
+ * Copyright(c) 2020 TUBU ARGE
+ * MIT Licensed
+ */
+
 // Helpers
 const FolderHelper = require('../helpers/FolderHelper');
 

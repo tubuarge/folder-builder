@@ -8,6 +8,21 @@ Easy way to build folder structure for [node](http://nodejs.org)
 [![GitHub issues](https://img.shields.io/github/issues/tubuarge/folder-builder)](https://github.com/tubuarge/folder-builder/issues)
 [![GitHub license](https://img.shields.io/github/license/tubuarge/folder-builder)](https://github.com/tubuarge/folder-builder/blob/master/LICENSE)
 
+```js
+const FolderBuilder = require('../src');
+
+// Create a new FolderBuilder instance with path
+const fb = new FolderBuilder(__dirname);
+
+// Create a new folder instance with name
+const newFolder = fb.createFolder('ex1');
+
+
+// Build a new folder
+newFolder.build(newFolder).catch(console.error);
+```
+
+
 It helps you to create files and folders easily. It can create files inside other folders recursively. Can create, delete, update files and or folders at the same time. Add this to your package.json file and it is ready to use.
 
 ## Get Started
@@ -24,9 +39,10 @@ Object -> Folder and File default [Options](#file-options)
 
 Example:
 ```js
-const fb = new FolderBuilder({
+new FolderBuilder({
     "defaultFolder": {
-                "name" : "sample"  
+                "name" : "sample",
+                "path" : __dirname  
             },
     "defaultFile": {
                 "mode" : 0o555
@@ -34,29 +50,12 @@ const fb = new FolderBuilder({
     });
 ```
 
----
-### Basic Example
-
-```js
-const FolderBuilder = require('../src');
-
-// Create a new FolderBuilder instance with path
-const fb = new FolderBuilder(__dirname);
-
-// Create a new folder instance with name
-const newFolder = fb.createFolder('ex1');
-
-
-// Build a new folder
-newFolder.build(newFolder).catch(console.error);
-```
-
 Main Folder Builder Methods
-- [createFolder()](#createFolder)
+- [createFolder()](#createfolder)
 
     Create [folder](#folder) instance
     
-- [createFile()](#createFile)
+- [createFile()](#createfile)
 
     Create [file](#file) instance
     
@@ -118,7 +117,7 @@ and return a new folder instance
 ##### Parameters
 String -> Folder Name
 
-Object -> Folder [Options](folder-options)
+Object -> Folder [Options](#folder-options)
 
 ---
 
@@ -131,7 +130,7 @@ return a new file instance
 ##### Parameters
 String -> File Name
 
-Object -> Folder [Options](folder-options)
+Object -> Folder [Options](#folder-options)
 
 ---
 
@@ -226,16 +225,4 @@ For more examples, look at [examples folder](./examples) .
 
 ---
 ## License
-  Copyright 2020, TUBU ARGE
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+[MIT](LICENSE)
