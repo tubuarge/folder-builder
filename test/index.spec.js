@@ -1,6 +1,6 @@
 const fs = require('fs-extra');
 const path = require('path');
-const FormBuilder = require('../index');
+const FormBuilder = require('../src');
 
 const testFolderPath = path.join(__dirname, 'test_folder');
 

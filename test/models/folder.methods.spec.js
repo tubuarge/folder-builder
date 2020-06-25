@@ -1,4 +1,4 @@
-const Folder = require('../Folder');
+const Folder = require('../../src/models/Folder');
 
 describe('Folder', () => {
   describe('constructor', () => {
