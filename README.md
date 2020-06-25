@@ -6,7 +6,6 @@ Easy way to build folder structure for [node](http://nodejs.org)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/tubuarge/folder-builder)
 [![codecov](https://codecov.io/gh/tubuarge/folder-builder/branch/master/graph/badge.svg)](https://codecov.io/gh/tubuarge/folder-builder)
 [![GitHub issues](https://img.shields.io/github/issues/tubuarge/folder-builder)](https://github.com/tubuarge/folder-builder/issues)
-[![GitHub license](https://img.shields.io/github/license/tubuarge/folder-builder)](https://github.com/tubuarge/folder-builder/blob/master/LICENSE)
 
 ```js
 const FolderBuilder = require('../src');
@@ -29,7 +28,7 @@ It helps you to create files and folders easily. It can create files inside othe
 `FolderBuilder` is used to create a new folder management system.
 
 ```js
-const fb = new FolderBuilder(__dirname);
+new FolderBuilder(__dirname);
 ```
 #### Constructor Parameters
 
@@ -103,8 +102,8 @@ Folder instance for management folder works
 - archive : Generate a zip file of current folder, current path
 
 Folder Methods
-- [addFolder()](#addFolder)
-- [addFile()](#addFile)
+- [addFolder()](#addfolder)
+- [addFile()](#addfile)
 - [build()](#build)
 ---
 
