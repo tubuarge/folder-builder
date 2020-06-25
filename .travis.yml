@@ -20,3 +20,5 @@ cache:
 script:
   - npm run test:coverage
   - codecov
+
+email : false

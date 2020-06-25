@@ -4,6 +4,8 @@
  * MIT Licensed
  */
 
+const { readFromFile } = require('../helpers/FileHelper');
+
 /**
  * Render the content of file and return a new file with rendered content
  * @param renderObj Object Key-Value, key is showed as $[key] inside the content
@@ -11,6 +13,11 @@
  */
 function render(renderObj, options = {}) {
   let resultText = this.content;
+
+  if ((typeof resultText === 'string' && resultText.trim().length === 0) || typeof resultText === 'object') {
+    throw new Error('Empty or Object Content');
+  }
+
   const keys = Object.keys(renderObj);
   for (let i = 0; i < keys.length; i += 1) {
     const key = keys[i];
@@ -23,6 +30,21 @@ function render(renderObj, options = {}) {
 }
 
 /**
+ * Read a file to fill file content
+ * @param contentUrl {String | undefined} a path to read file, default content of File object
+ * @returns {File} returns File with filling content
+ */
+function read(contentUrl) {
+  if (contentUrl) {
+    this.contentUrl = contentUrl;
+  }
+
+  this.content = readFromFile(this.contentUrl);
+
+  return this;
+}
+
+/**
  * File Object
  * @param file {Object}
  * @constructor
@@ -31,9 +53,15 @@ const File = function FileCreator(file) {
   const fileBase = {
     name: '',
     content: '',
+    contentUrl: '',
     mode: 0o666,
     render,
+    read,
   };
+
+  if (file && file.contentUrl && !(file.content)) {
+    fileBase.content = readFromFile(file.contentUrl);
+  }
 
   if (typeof file === 'object') {
     if (!file.name || !file.name.trim()) {

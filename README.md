@@ -171,12 +171,43 @@ Options
 ```
 - name : File name
 - content : Content of file
+- contentUrl : A file path to read and fill the content
 - mode : File permissions, for [detail](https://nodejs.org/api/fs.html#fs_file_modes)
 
+> Warning : If `content` is not empty, `contentUrl` will not be used
 > Warning : To insert the content into the file during building process, mode must include Write Permission
 
 File Methods
+- [Read()](#read)
 - [Render()](#render)
+
+---
+#### Read
+Read the `contentUrl` path and fill the current file content, 
+
+`newFile.read(contentUrl)`
+
+##### Parameters
+contentUrl -> A path to read file to file the current file content 
+> if `contentUrl` parameter is empty, it uses current file `contentUrl`
+Example:
+
+```js
+const FolderBuilder = require('@tubu/folder-builder');
+
+// Create a new FolderBuilder instance with path
+const fb = new FolderBuilder(__dirname);
+
+// Create a new file instance with name
+const newFile = fb.createFile("sample.txt");
+
+// Assume that `sample.txt` contains 'Hello' 
+const readFile = newFile.read('/sample/sample.txt');
+
+// It prompts 'Hello'
+console.log(readFile.content);
+
+```
 
 ---
 #### render
@@ -184,6 +215,8 @@ Render the current file content,
 and return rendered file instance
 
 `newFile.render(renderObj)`
+
+
 
 ##### Parameters
 Object -> Key-Value to render object inside the current file content, it uses $[key] to refer a key inside the current file content
@@ -231,7 +264,6 @@ newFolder.build().catch(console.error);
 // -> You FolderBuilder User! You are adult
 ```
 ---
-
 ## Examples
 
 For more examples, look at [examples folder](./examples) .

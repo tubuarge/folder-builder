@@ -1,6 +1,6 @@
 const path = require('path');
 const fs = require('fs-extra');
-const { isInSameName, generateFolder } = require('../FolderHelper');
+const { isInSameName, generateFolder } = require('../../src/helpers/FolderHelper');
 
 describe('FolderHelper', () => {
   describe('isInSameName', () => {
