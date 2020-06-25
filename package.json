@@ -38,7 +38,16 @@
   "engines": {
     "node": ">= 10.16.0"
   },
-
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/tubuarge/folder-builder/blob/master/LICENSE.txt"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/tubuarge/folder-builder/issues"
+  },
+  "homepage": "https://github.com/tubuarge/folder-builder",
   "devDependencies": {
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
