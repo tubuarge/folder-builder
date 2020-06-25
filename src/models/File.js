@@ -1,3 +1,9 @@
+/*!
+ * folder-builder
+ * Copyright(c) 2020 TUBU ARGE
+ * MIT Licensed
+ */
+
 /**
  * Render the content of file and return a new file with rendered content
  * @param renderObj Object Key-Value, key is showed as $[key] inside the content
@@ -15,7 +21,6 @@ function render(renderObj, options = {}) {
   // eslint-disable-next-line no-proto
   return Object.create({ ...this.__proto__, ...options, content: resultText });
 }
-
 
 /**
  * File Object
@@ -50,6 +55,5 @@ const File = function FileCreator(file) {
 
   throw new Error('File is undefined');
 };
-
 
 module.exports = File;
