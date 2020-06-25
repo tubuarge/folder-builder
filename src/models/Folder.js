@@ -34,17 +34,17 @@ function addFolder(folder) {
  * @param file {String, File} File Name or File Object
  * @params returnFile {Boolean} Returns file object
  */
-function addFile(file) {
-  if (FolderHelper.isInSameName(this.files, file.name || file)) {
-    throw new Error('Same file name');
-  }
-  if (file && (typeof file === 'object' || typeof file === 'string')) {
+function addFile(file = {}) {
+  if (typeof file === 'object' || typeof file === 'string') {
+    if (FolderHelper.isInSameName(this.files, file.name || file)) {
+      throw new Error('Same file name');
+    }
     const newFile = new File(file);
 
     this.files.push(newFile);
     return newFile;
   }
-  throw new Error('Invalid file');
+  throw new Error('Invalid File Type');
 }
 
 /** *

@@ -70,7 +70,7 @@ describe('FormBuilder', (() => {
         sampleFolder.addFile(123123);
       } catch (error) {
         expect(error).toBeTruthy();
-        expect(error.message).toBe('Invalid file');
+        expect(error.message).toBe('Invalid File Type');
       }
     });
     test('error occurs when add same name file', () => {

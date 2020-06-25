@@ -1,5 +1,5 @@
 const path = require('path');
-const fs = require('fs');
+const fs = require('fs-extra');
 const { isInSameName, generateFolder } = require('../FolderHelper');
 
 describe('FolderHelper', () => {
@@ -31,16 +31,14 @@ describe('FolderHelper', () => {
       }));
     });
 
-    test('Folder, if not exists', (done) => {
-      generateFolder(testFolderPath).then(() => {
-        expect(fs.existsSync(testFolderPath)).toBeTruthy();
-        done();
-      });
+    test('Folder, if not exists', async () => {
+      await generateFolder(testFolderPath);
+      expect(fs.existsSync(testFolderPath)).toBeTruthy();
     });
 
     test('Folder, if exists', async () => {
       await generateFolder(testFolderPath);
-      await generateFolder(testFolderPath);
+      await generateFolder(testFolderPath, false);
       expect(fs.existsSync(testFolderPath)).toBeTruthy();
     });
 
