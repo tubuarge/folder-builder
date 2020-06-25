@@ -41,6 +41,9 @@ FolderBuilder.prototype.createFolder = function createFolder(folder) {
 
 FolderBuilder.prototype.createFile = function createFile(file) {
   if (typeof file === 'string') {
+    if (!file || !file.trim()) {
+      throw new Error('File name is empty');
+    }
     return new File({
       ...this.options.defaultFile,
       name: file,

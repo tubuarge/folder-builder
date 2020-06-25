@@ -70,7 +70,7 @@ describe('FormBuilder', (() => {
         sampleFolder.addFile(123123);
       } catch (error) {
         expect(error).toBeTruthy();
-        expect(error.message).toBe('Invalid file');
+        expect(error.message).toBe('Invalid File Type');
       }
     });
     test('error occurs when add same name file', () => {
@@ -195,11 +195,9 @@ describe('FormBuilder', (() => {
   });
   describe('build', () => {
     beforeEach((done) => {
-      fs.rmdir(testFolderPath, {
-        recursive: true,
-      }, (() => {
+      fs.remove(testFolderPath).then(() => {
         done();
-      }));
+      });
     });
 
     test('build a folder correctly', (done) => {
@@ -430,11 +428,9 @@ describe('FormBuilder', (() => {
     });
 
     afterAll((done) => {
-      fs.rmdir(testFolderPath, {
-        recursive: true,
-      }, (() => {
+      fs.remove(testFolderPath).then(() => {
         done();
-      }));
+      });
     });
   });
 }));
