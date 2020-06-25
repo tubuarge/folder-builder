@@ -1,11 +1,18 @@
-![Imgur](https://i.imgur.com/XR3ApHU.png)
-
-Easy way to build folder structure for [node.js](http://nodejs.org)
+<p align="center">
+  <a href="https://github.com/tubuarge/folder-builder">
+    <img alt="Node.js" src="https://raw.githubusercontent.com/tubuarge/folder-builder/master/folder_builder_logo.png" width="200"/>
+  </a>
+</p>
 
 [![Build Status](https://travis-ci.org/tubuarge/folder-builder.svg?branch=master)](https://travis-ci.org/tubuarge/folder-builder)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/tubuarge/folder-builder)
 [![codecov](https://codecov.io/gh/tubuarge/folder-builder/branch/master/graph/badge.svg)](https://codecov.io/gh/tubuarge/folder-builder)
+[![dependencies Status](https://david-dm.org/tubuarge/folder-builder/status.svg)](https://david-dm.org/tubuarge/folder-builder)
 [![GitHub issues](https://img.shields.io/github/issues/tubuarge/folder-builder)](https://github.com/tubuarge/folder-builder/issues)
+
+Easy way to build folder structure for [node.js](http://nodejs.org)
+
+---
 
 ```js
 const FolderBuilder = require('@tubu/folder-builder');
