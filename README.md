@@ -1,6 +1,6 @@
 # Folder Builder
 
-Easy way to build folder structure for [node](http://nodejs.org)
+Easy way to build folder structure for [node.js](http://nodejs.org)
 
 [![Build Status](https://travis-ci.org/tubuarge/folder-builder.svg?branch=master)](https://travis-ci.org/tubuarge/folder-builder)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/tubuarge/folder-builder)
@@ -23,6 +23,19 @@ newFolder.build(newFolder).catch(console.error);
 
 
 It helps you to create files and folders easily. It can create files inside other folders recursively. Can create, delete, update files and or folders at the same time. Add this to your package.json file and it is ready to use.
+
+## Installation
+Available on [npm registry](https://www.npmjs.com/package/@tubu/folder-builder) as a [node.js](http://nodejs.org) module
+
+To install this package
+```bash
+$ npm @tubu/folder-builder
+```
+Or
+```bash
+$ yarn add @tubu/folder-builder
+```
+
 
 ## Get Started
 `FolderBuilder` is used to create a new folder management system.
