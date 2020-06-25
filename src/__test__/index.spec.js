@@ -195,11 +195,9 @@ describe('FormBuilder', (() => {
   });
   describe('build', () => {
     beforeEach((done) => {
-      fs.rmdir(testFolderPath, {
-        recursive: true,
-      }, (() => {
+      fs.remove(testFolderPath).then(() => {
         done();
-      }));
+      });
     });
 
     test('build a folder correctly', (done) => {
@@ -430,11 +428,9 @@ describe('FormBuilder', (() => {
     });
 
     afterAll((done) => {
-      fs.rmdir(testFolderPath, {
-        recursive: true,
-      }, (() => {
+      fs.remove(testFolderPath).then(() => {
         done();
-      }));
+      });
     });
   });
 }));

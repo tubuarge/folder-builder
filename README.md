@@ -26,7 +26,7 @@ It helps you to create files and folders easily. It can create files inside othe
 
 ## Installation
 Available on [npm registry](https://www.npmjs.com/package/@tubu/folder-builder) as a [node.js](http://nodejs.org) module
-> node version > 8.17.0
+> node version > 10.16.0
 
 To install this package
 ```bash

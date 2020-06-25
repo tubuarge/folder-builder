@@ -24,11 +24,9 @@ describe('FolderHelper', () => {
     const testFolderPath = path.join(__dirname, 'test');
 
     afterEach((done) => {
-      fs.rmdir(testFolderPath, {
-        recursive: true,
-      }, (() => {
+      fs.rmdir(testFolderPath).then(() => {
         done();
-      }));
+      });
     });
 
     test('Folder, if not exists', async () => {
