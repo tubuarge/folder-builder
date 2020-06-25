@@ -8,7 +8,7 @@ Easy way to build folder structure for [node.js](http://nodejs.org)
 [![GitHub issues](https://img.shields.io/github/issues/tubuarge/folder-builder)](https://github.com/tubuarge/folder-builder/issues)
 
 ```js
-const FolderBuilder = require('../src');
+const FolderBuilder = require('@tubu/folder-builder');
 
 // Create a new FolderBuilder instance with path
 const fb = new FolderBuilder(__dirname);
@@ -190,7 +190,7 @@ Object -> Key-Value to render object inside the current file content, it uses $[
 
 Example
 ```js
-const FolderBuilder = require('../src');
+const FolderBuilder = require('@tubu/folder-builder');
 
 // Create a new FolderBuilder instance with path
 const fb = new FolderBuilder(__dirname);

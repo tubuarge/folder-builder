@@ -1,5 +1,5 @@
 {
-  "name": "@tubuarge/folder-builder",
+  "name": "@tubu/folder-builder",
   "version": "1.0.1",
   "description": "Easy way to build folder",
   "main": "./src/index.js",
@@ -17,6 +17,11 @@
     "fs",
     "fs-extra"
   ],
+  "files": [
+    "LICENSE",
+    "README.md",
+    "src/"
+  ],
   "license": "MIT",
   "dependencies": {
     "archiver": "^4.0.1",
@@ -33,12 +38,7 @@
   "engines": {
     "node": ">= 10.16.0"
   },
-  "files": [
-    "LICENSE",
-    "README.md",
-    "src/index.js",
-    "examples/"
-  ],
+
   "devDependencies": {
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
