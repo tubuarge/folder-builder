@@ -4,7 +4,10 @@ const { tryToJSON, readFromFile } = require('../../src/helpers/FileHelper');
 
 describe('FileHelper', () => {
   describe('tryToJSON', () => {
-    test('correctly returns false', () => {
+    test('correctly returns undefined', () => {
+      expect(tryToJSON('')).toBeFalsy();
+    });
+    test('correctly returns undefined', () => {
       expect(tryToJSON('Hellooo')).toBeFalsy();
     });
     test('correctly returns true', () => {
