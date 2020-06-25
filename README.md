@@ -1,4 +1,4 @@
-# Folder Builder
+![Imgur](https://i.imgur.com/XR3ApHU.png)
 
 Easy way to build folder structure for [node.js](http://nodejs.org)
 
