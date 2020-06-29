@@ -4,8 +4,10 @@
   </a>
 </p>
 
-  [![Build Status](https://travis-ci.org/tubuarge/folder-builder.svg?branch=master)](https://travis-ci.org/tubuarge/folder-builder)
+  ![Travis (.org) branch](https://img.shields.io/travis/tubuarge/folder-builder/master?label=linux)
+  ![AppVeyor branch](https://img.shields.io/appveyor/build/safakoks/folder-builder/master?label=windows)
   ![GitHub release (latest by date)](https://img.shields.io/github/v/release/tubuarge/folder-builder)
+  [![Node version](https://img.shields.io/node/v/@tubu/folder-builder.svg?style=flat)](http://nodejs.org/download/)
   [![codecov](https://codecov.io/gh/tubuarge/folder-builder/branch/master/graph/badge.svg)](https://codecov.io/gh/tubuarge/folder-builder)
   [![dependencies Status](https://david-dm.org/tubuarge/folder-builder/status.svg)](https://david-dm.org/tubuarge/folder-builder)
   [![GitHub issues](https://img.shields.io/github/issues/tubuarge/folder-builder)](https://github.com/tubuarge/folder-builder/issues)

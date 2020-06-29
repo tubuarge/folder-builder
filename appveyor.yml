@@ -1,0 +1,38 @@
+environment:
+  matrix:
+    - nodejs_version: "10.16"
+    - nodejs_version: "11.15"
+    - nodejs_version: "12.16"
+    - nodejs_version: "13.14"
+cache:
+  - node_modules
+install:
+  # Install Node.js
+  - ps: >-
+      try { Install-Product node $env:nodejs_version -ErrorAction Stop }
+      catch { Update-NodeJsInstallation (Get-NodeJsLatestBuild $env:nodejs_version) }
+  # Configure npm
+  - ps: |
+      # Skip updating shrinkwrap / lock
+      npm config set shrinkwrap false
+  # Update Node.js modules
+  - ps: |
+      # Prune & rebuild node_modules
+      if (Test-Path -Path node_modules) {
+        npm prune
+        npm rebuild
+      }
+  # Install Node.js modules
+  - npm install
+  - npm install -g codecov
+build: off
+test_script:
+  # Output version data
+  - ps: |
+      node --version
+      npm --version
+  # Run test script with coverage
+  - npm run test:coverage
+  # Run codecov
+  - codecov
+version: "{build}"

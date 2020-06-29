@@ -11,7 +11,6 @@ node_js:
 install:
   - npm install yarn -g
   - npm install -g codecov
-  - yarn install
 
 cache:
   directories:
