@@ -39,7 +39,7 @@ Available on [npm registry](https://www.npmjs.com/package/@tubu/folder-builder) 
 
 To install this package
 ```bash
-$ npm @tubu/folder-builder
+$ npm install @tubu/folder-builder
 ```
 Or
 ```bash
