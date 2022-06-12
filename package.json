@@ -8,8 +8,7 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage=true"
   },
-  "repository":  "tubuarge/folder-builder"
-  ,
+  "repository": "tubuarge/folder-builder",
   "keywords": [
     "folder",
     "file",
@@ -25,7 +24,7 @@
   "license": "MIT",
   "dependencies": {
     "archiver": "^4.0.1",
-    "fs-extra": "^9.0.1"
+    "fs-extra": "^10.0.0"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
